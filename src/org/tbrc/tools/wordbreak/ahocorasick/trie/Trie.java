@@ -28,6 +28,8 @@ public class Trie {
 	private TrieConfig trieConfig;
 
 	private State rootState;
+	
+	private int yiGeCount = 0;
 
 	private boolean failureStatesConstructed = false;
 
@@ -38,6 +40,14 @@ public class Trie {
 
 	public Trie() {
 		this(new TrieConfig());
+	}
+	
+	public int getYiGeCount() {
+		return yiGeCount;
+	}
+	
+	public void resetYiGeCount() {
+		yiGeCount = 0;
 	}
 
 	public Trie caseInsensitive() {
@@ -74,6 +84,8 @@ public class Trie {
 	public Collection<Token> tokenize(String textStr) {
 
 		YiGeSeq text = new YiGeSeq(textStr);
+		
+		yiGeCount += text.length();
 
 		Collection<Token> tokens = new ArrayList<Token>();
 
