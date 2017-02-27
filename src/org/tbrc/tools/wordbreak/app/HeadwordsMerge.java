@@ -10,8 +10,8 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import org.tbrc.common.server.SortTibetanUnicodeStrings;
-import org.tbrc.common.shared.Converter;
+import org.tbrc.tools.wordbreak.utils.SortTibetanUnicodeStrings;
+import org.tbrc.tools.wordbreak.utils.Converter;
 
 
 public class HeadwordsMerge {
